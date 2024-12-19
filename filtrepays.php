@@ -33,10 +33,9 @@ add_action("wp_enqueue_scripts", "charger_scripts_css");
 function generer_boutons(){
     $pays = ["France", "États-Unis", "Canada", "Argentine", "Chili", "Belgique", "Maroc", "Mexique", "Japon", "Italie", "Islande", "Chine", "Grèce", "Suisse"];
     $contenu = "";
-    foreach($pays as $key=>$value){
+    foreach($pays as $value){
         $nom = $value;
-        $id = $key;
-        $contenu .= '<button data-id="' . $id . '">' . $nom . '</button>';
+        $contenu .= '<button data-name="' . $nom . '">' . $nom . '</button>';
     }
     return '<div class="filtre__bouton">' . $contenu . '</div>';
 }
