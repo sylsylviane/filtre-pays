@@ -1,10 +1,11 @@
 <?php
 /*
-plugin name: Filtre pays
-author: Sylviane Paré
-description: Une extension qui permettra de filtrer par pays
-author uri: https://www.gftnth00.mywhc.ca/31w09
+Plugin Name: Filtre pays
+Author: Sylviane Paré
+Description: Une extension qui permettra de filtrer par pays
+Author URI: https://www.gftnth00.mywhc.ca/31w09
 */
+
 
 function charger_scripts_css(){
 
@@ -29,15 +30,15 @@ function charger_scripts_css(){
 
 add_action("wp_enqueue_scripts", "charger_scripts_css");
 
-function genere_boutons(){
-    $categories = get_categories();
+function generer_boutons(){
+    $pays = ["France", "États-Unis", "Canada", "Argentine", "Chili", "Belgique", "Maroc", "Mexique", "Japon", "Italie", "Islande", "Chine", "Grèce", "Suisse"];
     $contenu = "";
-    foreach($categories as $element){
-        $nom = $element->name;
-        $id = $element->term_id;
+    foreach($pays as $key=>$value){
+        $nom = $value;
+        $id = $key;
         $contenu .= '<button data-id="' . $id . '">' . $nom . '</button>';
     }
     return '<div class="filtre__bouton">' . $contenu . '</div>';
 }
 
-add_shortcode('extraire_categories', 'genere_boutons');
+add_shortcode('extraire_pays', 'generer_boutons');
