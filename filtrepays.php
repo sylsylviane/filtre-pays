@@ -7,7 +7,7 @@ Author URI: https://www.gftnth00.mywhc.ca/31w09
 */
 
 
-function charger_scripts_css(){
+function charger_css(){
 
     $version_css = filemtime(plugin_dir_path(__FILE__). "/style.css");
     $version_js = filemtime(plugin_dir_path(__FILE__) . "js/filtrepays.js");
@@ -28,7 +28,7 @@ function charger_scripts_css(){
     ); 
 }
 
-add_action("wp_enqueue_scripts", "charger_scripts_css");
+add_action("wp_enqueue_scripts", "charger_css");
 
 function generer_boutons(){
     $pays = ["France", "États-Unis", "Canada", "Argentine", "Chili", "Belgique", "Maroc", "Mexique", "Japon", "Italie", "Islande", "Chine", "Grèce", "Suisse"];
