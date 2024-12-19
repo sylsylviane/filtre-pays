@@ -1,4 +1,4 @@
-let categorie = 3;
+let categorie = 49;
 
 extraire_categories(categorie);
 
@@ -20,7 +20,7 @@ for (const elm of bouton_categorie) {
 function extraire_categories(categorie) {
   // Construction de l’URL pour appeler l’API REST en fonction de la catégorie
   fetch(
-    `http://localhost/31w/wp-json/wp/v2/posts?categories=${categorie}&per_page=30`
+    `http://localhost/31w/wp-json/wp/v2/posts?search=${categorie}&per_page=30`
   )
     // Conversion de la réponse en JSON
     .then((response) => response.json())
