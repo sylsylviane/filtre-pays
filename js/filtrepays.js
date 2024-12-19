@@ -1,4 +1,4 @@
-let pays = 0;
+let pays = 'France';
 
 extraire_pays(pays);
 
@@ -7,7 +7,7 @@ let bouton_pays = document.querySelectorAll(".filtre__bouton button"); //
 for (const elm of bouton_pays) {
   elm.addEventListener("mousedown", function (e) {
     // Lorsqu’un bouton est cliqué, on récupère l’ID de la catégorie associée
-    pays = e.target.dataset.id;
+    pays = e.target.dataset.name;
     console.log("Pays sélectionnée: ", pays);
     // Appel de la fonction pour extraire les cours de la catégorie sélectionnée
     extraire_pays(pays);
@@ -26,7 +26,7 @@ function extraire_pays(pays) {
     .then((response) => response.json())
     .then((data) => {
       // Affiche les articles récupérés pour déboguer
-      console.log("Articles récupérés: ", data);
+      console.log("Destinations récupérés: ", data);
       afficherVoyages(data); // Appel à la fonction pour afficher les articles
     })
     .catch((error) =>
