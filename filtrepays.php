@@ -9,18 +9,18 @@ author uri: https://www.gftnth00.mywhc.ca/31w09
 function charger_scripts_css(){
 
     $version_css = filemtime(plugin_dir_path(__FILE__). "/style.css");
-    $version_js = filemtime(plugin_dir_path(__FILE__) . "js/filtrepost.js");
+    $version_js = filemtime(plugin_dir_path(__FILE__) . "js/filtrepays.js");
 
     wp_enqueue_style(
-        "filtrepost",        
+        "filtrepays",        
         plugin_dir_url(__FILE__) . "/style.css",
         array(),
         $version_css
     ) ;  
 
     wp_enqueue_script(  
-        "filtrepost",       
-        plugin_dir_url(__FILE__) . "/js/filtrepost.js",
+        "filtrepays",       
+        plugin_dir_url(__FILE__) . "/js/filtrepays.js",
         array(),
         $version_js,
         true
