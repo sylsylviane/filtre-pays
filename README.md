@@ -7,3 +7,6 @@
 - Utiliser la requête rest-api suivante pour extraire les destinations par pays : Cette instruction permet d’extraire l’adresse du domaine.
 window.location.origin + "/31w"; // pour ajouter un dossier au domaine
 /wp-json/wp/v2/posts?search=canada&per_page=30 // la requête rest
+
+- Auteur : Sylviane Paré
+- Lien whc: https://gftnth00.mywhc.ca/31w09/
